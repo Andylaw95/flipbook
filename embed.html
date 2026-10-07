@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; connect-src 'self'; img-src 'self' data: blob:; font-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook — Embedded Viewer</title>
+    <link rel="stylesheet" href="css/fullscreen.css">
+    <link rel="stylesheet" href="css/embed.css">
+
+</head>
+<body>
+    <div class="embed-viewer">
+        <div class="embed-toolbar">
+            <div class="embed-nav">
+                <button id="e-prev" title="Previous">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span class="embed-page" id="e-page">1 / 1</span>
+                <button id="e-next" title="Next">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+            </div>
+            <div class="embed-actions">
+                <button id="e-download" title="Download PDF">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </button>
+                <button id="e-fullscreen" title="Fullscreen">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                    </svg>
+                </button>
+                <button id="e-open" title="Open in new window">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="embed-canvas-wrap" id="e-canvasWrap">
+            <div class="embed-loading" id="e-loading">Loading...</div>
+        </div>
+
+        <div class="embed-branding">
+            <a href="index.html" target="_blank" rel="noopener noreferrer">View full publication ↗</a>
+        </div>
+    </div>
+
+    <script src="js/fullscreen.js"></script>
+    <script type="module" src="js/embed.js"></script>
+
+</body>
+</html>

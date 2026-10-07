@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.pdf -text -diff
+*.wasm -text -diff
+*.bcmap -text -diff
+*.pfb -text -diff
+*.icc -text -diff
+vendor/** -text -whitespace
+licenses/** -text -whitespace

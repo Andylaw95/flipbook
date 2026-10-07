@@ -1,0 +1,23 @@
+{
+  "name": "flipbook",
+  "version": "1.0.0",
+  "description": "A standalone PDF flipbook with curved page turns, smooth zoom and fullscreen.",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/verify-release.mjs",
+    "start": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "lint": "eslint js scripts tests playwright.config.cjs",
+    "check": "node --check js/flipbook-engine.js && node --check js/app.js && node --check js/fullscreen.js && node --check js/pdf-loader.js && node --check js/embed.js",
+    "test": "playwright test",
+    "vendor": "node scripts/vendor-pdfjs.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "eslint": "9.39.1",
+    "pdfjs-dist": "6.4.299"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

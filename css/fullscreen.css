@@ -1,0 +1,54 @@
+/* Size the actual viewer, including its navigation, to the native viewport. */
+.app:fullscreen, .embed-viewer:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: #e8e8e8;
+}
+.app:-webkit-full-screen, .embed-viewer:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+    background: #e8e8e8;
+}
+.fullscreen-fallback {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    z-index: 1000;
+}
+.fullscreen-fallback > .toolbar,
+.fullscreen-fallback > .embed-toolbar { display: none; }
+.reading-mode-exit {
+    position: absolute;
+    top: max(8px, env(safe-area-inset-top));
+    right: max(8px, env(safe-area-inset-right));
+    z-index: 200;
+    padding: 10px 14px;
+    min-height: 44px;
+    color: #fff;
+    background: #1a1a2e;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+}
+.reading-mode-exit:focus-visible { outline: 3px solid #e94560; outline-offset: 3px; }
+.fullscreen-status {
+    position: absolute;
+    left: 50%;
+    bottom: max(52px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 32px);
+    z-index: 200;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: #fff;
+    background: #1a1a2e;
+    font-size: 13px;
+    text-align: center;
+    pointer-events: none;
+}
+.fullscreen-status:empty { display: none; }
