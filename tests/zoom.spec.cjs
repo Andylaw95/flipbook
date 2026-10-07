@@ -23,12 +23,16 @@ test('an early animation-frame timestamp cannot reverse the requested zoom direc
 });
 
 test('zoom buttons animate through intermediate sizes and rapid reversal stays continuous', async ({ page }) => {
+    // Exercise an actual intermediate animation frame without assuming that a
+    // loaded CI browser can deliver a frame within a 60 ms wall-clock sleep.
+    await page.clock.install({ time: new Date('2026-01-01T00:00:00Z') });
     await ready(page);
     await jump(page, 4);
-    const sample = await page.evaluate(async () => {
+    await page.clock.pauseAt(new Date('2026-01-01T00:01:00Z'));
+    await page.evaluate(() => __flipbookApp.engine.zoomIn());
+    await page.clock.runFor(64);
+    const sample = await page.evaluate(() => {
         const engine = __flipbookApp.engine;
-        engine.zoomIn();
-        await new Promise(resolve => setTimeout(resolve, 60));
         const middle = engine._displayZoom;
         const before = engine.flipbookEl.style.transform;
         engine.zoomOut();
@@ -37,6 +41,7 @@ test('zoom buttons animate through intermediate sizes and rapid reversal stays c
     expect(sample.middle).toBeGreaterThan(1);
     expect(sample.middle).toBeLessThan(1.25);
     expect(sample.after).toBe(sample.before);
+    await page.clock.resume();
     await idle(page, 4);
     expect(await page.evaluate(() => __flipbookApp.engine._displayZoom)).toBe(1);
     await page.locator('#btn-zoom-in').click();
