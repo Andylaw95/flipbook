@@ -4,6 +4,22 @@ A static PDF reader with curved page turns, moving shadows, a visible spine,
 responsive page layouts and smooth zoom. Written in HTML, CSS and JavaScript,
 with a pinned local copy of Mozilla PDF.js. A neutral 20-page sample is included.
 
+## See it in motion
+
+[![Flipbook opening an original editorial sample with curved page turns](docs/media/flipbook-preview.gif)](docs/media/flipbook-demo.mp4)
+
+**Turn. Zoom. Read.** A 28-second recording of the real reader: drag-to-turn,
+smooth zoom and pan, native fullscreen, and a responsive single-page layout.
+
+[Watch the MP4](docs/media/flipbook-demo.mp4) ·
+[Animated WebP](docs/media/flipbook-demo.webp) ·
+[Download the sample PDF](examples/form-and-field.pdf) ·
+[Screenshots and capture notes](docs/DEMO.md)
+
+The original *Form & Field* sample uses neutral vector artwork and is included
+under the MIT license. After starting the local server below, open
+`http://127.0.0.1:8000/index.html?pdf=examples/form-and-field.pdf` to try it.
+
 ## Quick start
 
 Download this repository's ZIP and extract it, or clone the repository:
