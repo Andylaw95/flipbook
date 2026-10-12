@@ -261,7 +261,7 @@ html, body {
     position: fixed;
     top: 48px;
     left: 0;
-    bottom: 44px;
+    bottom: 76px;
     width: var(--sidebar-width);
     background: var(--sidebar-bg);
     z-index: 90;
@@ -993,7 +993,7 @@ html, body {
     .sidebar {
         width: 100%;
         top: 44px;
-        bottom: 40px;
+        bottom: calc(72px + 2 * env(safe-area-inset-bottom));
     }
 
     .viewer.sidebar-open {

@@ -18,4 +18,6 @@ and ReportLab installed, run `python3 examples/generate_sample.py` from the
 repository root. ReportLab is needed only to regenerate this PDF, not to run
 the viewer. The output is deterministic and uses standard PDF font names.
 
-Text, illustrations, and source are available under the root [MIT License](../LICENSE).
+Text, illustrations, and source in this release use the root
+[Flipbook Source-Available License 1.0](../LICENSE). Earlier MIT copies retain
+their rights; see [the transition record](../docs/LICENSING.md).

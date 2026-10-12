@@ -141,7 +141,7 @@ base(11,PAPER,INK,'COLOPHON')
 label('ABOUT THIS PUBLICATION',34,90)
 text('Made to be',34,139,46,'Helvetica-Bold')
 text('turned.',34,191,61,'Helvetica-Bold')
-lines(['Form & Field is an original sample publication', 'created for the open-source Flipbook reader.', '', 'The places are imaginary. The illustrations', 'use simple vector shapes. There are no stock', 'photographs, private documents or paid assets.', '', 'Words and artwork: Flipbook contributors.', 'Available under the repository MIT License.'],34,296,12,leading=21)
+lines(['Form & Field is an original sample publication', 'created for the source-available Flipbook reader.', '', 'The places are imaginary. The illustrations', 'use simple vector shapes. There are no stock', 'photographs, private documents or paid assets.', '', 'Words and artwork: Flipbook contributors.', 'See repository LICENSE for the applicable terms.'],34,296,12,leading=21)
 text('A small publication. A fresh point of view.',34,557,17,'Times-Italic')
 end()
 

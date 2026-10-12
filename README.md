@@ -1,7 +1,7 @@
 # Flipbook
 
-A static PDF reader with curved page turns, moving shadows, a visible spine,
-responsive page layouts and smooth zoom. Written in HTML, CSS and JavaScript,
+A source-available static PDF reader with curved page turns, moving shadows,
+a visible spine, responsive page layouts and smooth zoom. Written in HTML, CSS and JavaScript,
 with a pinned local copy of Mozilla PDF.js. A neutral 20-page sample is included.
 
 ## See it in motion
@@ -17,8 +17,10 @@ smooth zoom and pan, native fullscreen, and a responsive single-page layout.
 [Screenshots and capture notes](docs/DEMO.md)
 
 The original *Form & Field* sample uses neutral vector artwork and is included
-under the MIT license. After starting the local server below, open
-`http://127.0.0.1:8000/index.html?pdf=examples/form-and-field.pdf` to try it.
+under the [Flipbook Source-Available License 1.0](LICENSE).
+[Try the live demo](https://andylaw95.github.io/flipbook/?pdf=examples/form-and-field.pdf),
+or start the local server below and open
+`http://127.0.0.1:8000/index.html?pdf=examples/form-and-field.pdf`.
 
 ## Quick start
 
@@ -153,8 +155,22 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and
 
 ## License
 
-Application code, documentation and the neutral sample are available under the
-[MIT License](LICENSE), copyright 2026 Andylaw95. Third-party assets retain their
-own licenses and notices; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md),
-`licenses/` and `vendor/pdfjs/`. This license does not grant rights to PDFs or
-other materials you supply yourself.
+Application code, documentation and original sample material in **v1.0.0** are
+available under the [Flipbook Source-Available License 1.0](LICENSE), copyright
+2026 Andylaw95. This is a source-available license, not an OSI-approved
+open-source license.
+
+Personal and company own-use, including showing your own catalogs, is free.
+Free redistribution and modifications are permitted under the license's terms.
+Public readers, including embedded readers, must keep the visible linked footer
+**Flipbook by Andylaw95**. Resale, inclusion in paid software offerings, paid
+Flipbook hosting, and paid third-party installation, deployment, configuration,
+customization or maintenance require prior written permission. Contact
+[Andylaw95 on GitHub](https://github.com/Andylaw95); an inquiry is not permission.
+The [full license](LICENSE) controls these permissions and conditions.
+
+This is the first release designated for the new license. Earlier MIT copies
+retain their MIT rights; see the [license transition record](docs/LICENSING.md).
+Third-party assets keep their own licenses and notices; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), `licenses/` and `vendor/pdfjs/`.
+User-supplied PDFs and other content are not licensed by the application license.

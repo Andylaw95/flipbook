@@ -1,6 +1,6 @@
 # Third-party notices
 
-The application and neutral sample use the root MIT license. Third-party files below keep their own licenses; preserve their notices when redistributing.
+The current application and original sample material use the root Flipbook Source-Available License 1.0. Earlier MIT copies retain their existing rights; see [the transition record](docs/LICENSING.md). Third-party files below keep their own licenses; preserve their notices when redistributing.
 
 ## Bundled runtime
 

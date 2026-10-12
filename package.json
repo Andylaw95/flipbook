@@ -1,7 +1,7 @@
 {
   "name": "flipbook",
   "version": "1.0.0",
-  "description": "A standalone PDF flipbook with curved page turns, smooth zoom and fullscreen.",
+  "description": "A source-available PDF flipbook with curved page turns, smooth zoom and fullscreen.",
   "private": true,
   "scripts": {
     "build": "node scripts/verify-release.mjs",
@@ -16,7 +16,7 @@
     "eslint": "9.39.1",
     "pdfjs-dist": "6.4.299"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "node": ">=22.13.0"
   }
