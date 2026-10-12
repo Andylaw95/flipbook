@@ -16,7 +16,7 @@
 | 24–28 s | Project call to action with a still captured during a real page turn. |
 
 This is a silent recording with explanatory titles. All app motion comes from
-the unchanged public reader. Loading lead-ins were removed; editorial framing
+the public v1.0.0 reader with its visible author credit. Loading lead-ins were removed; editorial framing
 and cuts were added outside the app. Playback uses the original interaction
 speed. No generated app frames, animation interpolation, or mocked features
 are used.
@@ -38,8 +38,10 @@ are used.
 
 ## Capture provenance and limits
 
-Source: [Andylaw95/flipbook](https://github.com/Andylaw95/flipbook), commit
-`a612c0223bc2b1a8dd9acabdd3f4f570959b2e13`.
+Source: [Andylaw95/flipbook](https://github.com/Andylaw95/flipbook),
+[v1.0.0 release](https://github.com/Andylaw95/flipbook/releases/tag/v1.0.0).
+The release identifies its exact source commit. App behavior was not modified
+for the capture.
 
 Captured in an isolated Chrome 154.0.8037.99 context against a localhost-only
 static server. The desktop app viewport was 1280 × 720; the phone-sized viewport
@@ -55,8 +57,10 @@ support. The page curl uses the reader's existing projected strips.
 
 The sample download was byte-for-byte identical to the original PDF. Captured
 sessions reported no page errors and requested only same-origin local files.
-The existing browser suite passed 62 Chromium and 57 WebKit checks; lint,
-JavaScript syntax checks, and static release verification also passed.
+The browser suite covers Chromium and WebKit on desktop and mobile, including
+credit visibility, keyboard focus, narrow iframes and fullscreen. Lint,
+JavaScript syntax checks, static release verification and dependency audit
+are recorded with the release validation.
 
 ## Privacy and credits
 
@@ -67,7 +71,9 @@ the public title and “Flipbook contributors”; there are no embedded files,
 active actions, private endpoints, or personal contact details.
 
 Original sample text, vector illustrations, editorial layouts, and demo
-documentation were created for this project and use the root [MIT License](../LICENSE).
+documentation were created for this project and use the root
+[Flipbook Source-Available License 1.0](../LICENSE). Earlier MIT copies retain
+their existing rights; see [the transition record](LICENSING.md).
 The sample's source is [included](../examples/generate_sample.py).
 There is no purchased media, stock photography, or music.
 

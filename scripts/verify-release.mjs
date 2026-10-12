@@ -38,5 +38,9 @@ for (const html of ['index.html', 'embed.html']) {
 const sample = readFileSync('sample.pdf', 'latin1');
 assert(!/\/(?:JavaScript|JS|OpenAction|AA|Launch|EmbeddedFiles)\b/.test(sample), 'Active content in sample PDF');
 assert.equal(readJSON('manifest.json').latestPDF, 'sample.pdf');
-assert(readFileSync('LICENSE', 'utf8').startsWith('MIT License'), 'Application license missing');
+assert.equal(createHash('sha256').update(readFileSync('LICENSE')).digest('hex'),
+    'd220af03af1bbf34b5f4567da1b18406f08c04f936f02b62c268a4ef23dea881',
+    'Approved Flipbook Source-Available License 1.0 differs');
+assert.equal(packageInfo.license, 'SEE LICENSE IN LICENSE');
+assert.equal(lock.packages[''].license, packageInfo.license);
 console.log(`Static release verified: ${files().length} files; pinned vendor integrity and sample checked.`);

@@ -21,7 +21,7 @@
         .embed-actions { display: flex; align-items: center; gap: 4px; }
 
         .embed-canvas-wrap {
-            flex: 1; display: flex; align-items: center; justify-content: center;
+            flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center;
             overflow: hidden; position: relative;
         }
 
@@ -35,10 +35,3 @@
             justify-content: center; background: #e8e8e8; color: #666;
         }
         .embed-loading.hidden { display: none; }
-
-        .embed-branding {
-            text-align: center; padding: 4px; font-size: 11px; color: #999;
-            background: #1a1a2e;
-        }
-        .embed-branding a { color: #e94560; text-decoration: none; }
-        .embed-branding a:hover { text-decoration: underline; }

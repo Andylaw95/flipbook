@@ -28,5 +28,10 @@ when changing rendering dependencies.
 
 Contribute only code and assets you have the right to license. Unless explicitly
 agreed otherwise, contributions to the application's code and documentation are
-under this repository's MIT license. Third-party files keep their own licenses.
+under the [Flipbook Source-Available License 1.0](LICENSE). Identify material
+modifications and keep the public and embedded reader attribution visible. Do
+not submit third-party work unless you have the rights needed to distribute it
+under its applicable terms; identify its source and license. Third-party files
+keep their own licenses. Earlier MIT copies retain their existing rights; see
+[the transition record](docs/LICENSING.md).
 There is no response-time or release-time guarantee.

@@ -1,21 +1,57 @@
-MIT License
+# Flipbook Source-Available License 1.0
 
 Copyright (c) 2026 Andylaw95
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## 1. Covered material
+This license applies only to the Flipbook application code, documentation and original sample material expressly distributed under this license by the applicable copyright holder (the “Software”). “You” means the individual or organization exercising the permissions below. A “Modified Version” means a version incorporating modifications or adaptations of the Software.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Third-party components and content, including bundled PDF.js assets, are governed by their own licenses and notices, not by this license. Documents and other content supplied by users are not licensed by this license.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## 2. Grant of permission
+Subject to the conditions below, you may, without paying a license fee:
+
+1. Use, reproduce and modify the Software for your own personal purposes or your organization's own operations, including displaying its own catalogs, publications or information on its own websites.
+2. Deploy the Software for those purposes, and transmit the runtime code to visitors' browsers as needed for that deployment.
+3. Distribute copies of the Software and Modified Versions without charge, in source or executable form, provided you comply with section 4.
+
+A business does not need separate permission merely because it sells the ordinary products displayed in its own catalog. Work by an organization's employees on its permitted own-business or internal deployment does not become a paid third-party service merely because those employees receive salaries.
+
+## 3. Activities requiring prior written permission
+The permissions in section 2 do not authorize the following activities without prior written permission from the applicable copyright holder:
+
+1. Selling copies of the Software or Modified Versions, or charging for a license to them.
+2. Including the Software or Modified Versions in a paid software product, plugin, template or similar software offering, even if the Software is not separately priced.
+3. Providing a paid hosted Flipbook service to third-party customers, including subscriptions or bundled service charges for hosting or providing the Flipbook viewer.
+4. Providing installation, deployment, configuration, customization or maintenance of the Software or Modified Versions to third-party clients for a fee, including when the fee is described solely as payment for services or included in a larger client-services charge.
+
+These conditions apply to the Flipbook software and services described above. They do not require permission merely for selling ordinary products displayed through an otherwise permitted own-business deployment. Renaming, modifying or repackaging the Software does not remove these conditions.
+
+Commercial licensing contact: https://github.com/Andylaw95
+
+This is the designated public contact destination. An inquiry, silence or failure to respond does not constitute permission. Any separate written permission must identify the authorized activity and applicable terms; no price or payment obligation is established by this license.
+
+## 4. Distribution and modifications
+All copies or substantial portions of the Software must preserve the applicable copyright and license notices. Every distributed copy of the Software or a Modified Version must include this license and preserve the applicable attribution and third-party notices. You must identify material modifications and must not misrepresent a Modified Version as an unmodified release from Andylaw95.
+
+Free redistribution of Modified Versions is allowed only under this same license for the covered Software and its modifications. You must not remove these conditions or offer recipients permissions for the covered material that you do not have. Each recipient receives the permissions in this license subject to its conditions, including the restrictions in section 3 and the attribution requirement in section 5.
+
+This requirement does not assert ownership of anyone else's contributions, apply to independent works merely distributed alongside the Software, or replace the licenses of third-party components. Any rights necessary to distribute contributions must be obtained from their respective rights holders.
+
+## 5. Attribution
+Every publicly accessible deployed viewer, including an embedded viewer and a Modified Version, must display a reasonably readable footer credit:
+
+**Flipbook by Andylaw95**
+
+The credit must link to https://github.com/Andylaw95 and be visible in the viewer's normal interface without opening an additional menu or dialog. It must remain accessible in embedded layouts. Do not remove or obscure it in a public deployment unless separate written permission expressly allows that change.
+
+Private personal use and deployments accessible only within your organization do not require a public-facing footer. They remain subject to the copyright and license-notice requirements applicable to their copies. Attribution must not imply endorsement of a Modified Version, product or service by Andylaw95.
+
+## 6. Existing licenses and reserved rights
+This license does not revoke, replace or restrict permissions already granted for copies of Flipbook distributed under MIT or another license. Such copies, and lawful downstream copies and uses under those licenses, remain governed by their applicable terms. This license applies only where it has been expressly selected for the material being supplied; it does not retroactively relicense earlier copies.
+
+Third-party permissions and obligations remain unchanged. Except for the limited permission to identify the original author and source as required above, this license grants no trademark or endorsement rights. All rights not expressly granted are reserved, without limiting rights you otherwise have under applicable law or another valid license.
+
+## 7. No warranty; limitation of liability
+To the maximum extent permitted by applicable law, the Software is provided “as is”, without warranties or conditions of any kind, express or implied, including merchantability, fitness for a particular purpose and non-infringement.
+
+To the maximum extent permitted by applicable law, the copyright holders and contributors shall not be liable for claims, damages or other liability arising from the Software or its use, whether in contract, tort or otherwise. Nothing in this license excludes or limits liability or rights that applicable law does not permit to be excluded or limited.
