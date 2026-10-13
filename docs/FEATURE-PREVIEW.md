@@ -56,6 +56,8 @@ with keyboard input, reload, exports/restoration, and unavailable browser storag
 The regression suite covers Chromium and WebKit in desktop and emulated phone
 viewports, face orientation, context-loss recovery, storage failure, content
 identity, text injection, cross-tab preservation, and focus restoration.
+A CSS visibility fallback keeps closed Notes controls out of keyboard focus even
+when native `inert` is unavailable; this is tested with inert support disabled.
 Physical phones and screen-reader software are not represented by these tests.
 
 Measurements and a short screen recording accompany the draft PR. They compare

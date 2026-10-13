@@ -127,3 +127,32 @@ test('another tab cannot silently overwrite changed notes', async ({ page, conte
     await expect(second.locator('#notes-list')).not.toContainText('Keep this newer session edit.');
     await second.close();
 });
+
+
+test('closed Notes controls cannot receive keyboard focus without native inert', async ({ page }) => {
+    await page.addInitScript(() => {
+        Object.defineProperty(window.HTMLElement.prototype, 'inert', {
+            configurable: true,
+            get() { return false; },
+            set() {}
+        });
+    });
+    await ready(page);
+    // Older Safari treats inert as an ordinary unknown attribute/property.
+    await page.locator('#sidebar').evaluate(el => el.removeAttribute('inert'));
+    await openNotes(page); await addNote(page, 'Keep closed controls out of the focus order.');
+    await expect(page.locator('#notes-json')).toBeEnabled();
+    await page.locator('#btn-menu').focus(); await page.keyboard.press('Enter');
+    await expect(page.locator('#btn-menu')).toHaveAttribute('aria-expanded', 'false');
+    await page.locator('#notes-add').focus();
+    await expect(page.locator('#btn-menu')).toBeFocused();
+    for (const key of ['Tab', 'Shift+Tab']) {
+        for (let step = 0; step < 16; step++) {
+            await page.keyboard.press(key);
+            expect(await page.locator('#sidebar').evaluate(el => el.contains(document.activeElement))).toBe(false);
+        }
+    }
+    await page.locator('#btn-menu').focus(); await page.keyboard.press('Enter');
+    await page.locator('#notes-add').click();
+    await expect(page.locator('#notes-text')).toBeFocused();
+});

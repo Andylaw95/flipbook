@@ -273,6 +273,8 @@ html, body {
 
 .sidebar.hidden {
     display: flex !important;
+    /* Also remove hidden controls from focus order where inert is unsupported. */
+    visibility: hidden;
     transform: translateX(-100%);
     pointer-events: none;
 }
