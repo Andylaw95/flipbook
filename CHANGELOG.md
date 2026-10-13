@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — review preview
+
+- Browser-local document and page notes, editing, undo, TXT export and JSON backup.
+- Original continuous corner-driven paper mesh with front/back textures, smooth
+  lighting, and graceful graphics fallback.
+- Notes keyboard/focus behavior and closed-sidebar focus isolation.
+
+See [preview details and limitations](docs/FEATURE-PREVIEW.md).
+
 ## 1.0.1 — 2026-10-13
 
 - Keep reading-mode and touch-zoom notices above the scrubber and author footer,

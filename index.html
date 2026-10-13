@@ -39,7 +39,7 @@
         <!-- Top Toolbar -->
         <header class="toolbar" id="toolbar">
             <div class="toolbar-left">
-                <button class="toolbar-btn" id="btn-menu" title="Menu" aria-label="Toggle sidebar">
+                <button class="toolbar-btn" id="btn-menu" aria-controls="sidebar" aria-expanded="false" title="Menu" aria-label="Toggle sidebar">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
                     </svg>
@@ -107,16 +107,44 @@
         </header>
 
         <!-- Sidebar (Thumbnails / Table of Contents) -->
-        <aside class="sidebar hidden" id="sidebar">
+        <aside class="sidebar hidden" id="sidebar" inert>
             <div class="sidebar-tabs">
-                <button class="sidebar-tab active" data-tab="thumbnails" data-i18n="thumbnails">Thumbnails</button>
-                <button class="sidebar-tab" data-tab="bookmarks" data-i18n="bookmarks">Bookmarks</button>
+                <button class="sidebar-tab active" data-tab="thumbnails" aria-pressed="true" data-i18n="thumbnails">Thumbnails</button>
+                <button class="sidebar-tab" data-tab="bookmarks" aria-pressed="false" data-i18n="bookmarks">Bookmarks</button>
+                <button class="sidebar-tab" data-tab="notes" aria-pressed="false" aria-controls="notes-panel">Notes</button>
             </div>
             <div class="sidebar-content" id="sidebar-content">
                 <div class="thumbnail-grid" id="thumbnail-grid"></div>
                 <div class="bookmark-list hidden" id="bookmark-list">
                     <p class="no-bookmarks" data-i18n="noBookmarks">No bookmarks yet. Click on a page to bookmark it.</p>
                 </div>
+                <section id="notes-panel" class="notes-panel hidden" aria-label="Publication notes">
+                    <p class="notes-privacy">Notes stay in this browser. No account or sync. Clearing site data deletes saved notes. Export a backup to keep them.</p>
+                    <p id="notes-status" role="status" aria-live="polite"></p>
+                    <div class="note-actions">
+                        <button id="notes-add" type="button" disabled>Add note</button>
+                        <button id="notes-undo" type="button" disabled>Undo</button>
+                    </div>
+                    <form id="notes-form" hidden>
+                        <h2 id="notes-editor-title">Add note</h2>
+                        <label for="notes-scope">Applies to</label>
+                        <select id="notes-scope"><option value="document">Whole document</option></select>
+                        <label for="notes-text">Note</label>
+                        <textarea id="notes-text" rows="5" maxlength="20000" required></textarea>
+                        <div class="note-actions">
+                            <button type="submit">Save note</button>
+                            <button id="notes-cancel" type="button">Cancel</button>
+                        </div>
+                    </form>
+                    <p id="notes-empty">No notes for this document yet.</p>
+                    <ul id="notes-list" aria-label="Saved notes"></ul>
+                    <div class="note-actions notes-exports">
+                        <button id="notes-txt" type="button" disabled>Export TXT</button>
+                        <button id="notes-json" type="button" disabled>JSON backup</button>
+                    </div>
+                    <label for="notes-restore">Restore JSON backup</label>
+                    <input id="notes-restore" type="file" accept=".json,application/json" disabled>
+                </section>
             </div>
         </aside>
 
@@ -197,8 +225,10 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/page-curl.js"></script>
     <script src="js/flipbook-engine.js"></script>
     <script src="js/fullscreen.js"></script>
+    <script src="js/notes.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

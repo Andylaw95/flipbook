@@ -70,7 +70,7 @@ test('short drag snaps back, long drag commits, Escape and pointer cancellation 
     await page.mouse.up();
     await idle(page, 4);
     await mouseDrag(page, .9);
-    await expect(page.locator('.paper-strip')).toHaveCount(20);
+    await expect(page.locator('.flip-element')).toBeVisible();
     await page.mouse.up();
     await idle(page, 6);
     await mouseDrag(page, .65);

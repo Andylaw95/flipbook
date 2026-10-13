@@ -6,7 +6,7 @@ test('touch swipe turns exactly one page in either direction and a short drag ca
     await expect(page.locator('.book')).toHaveClass(/single-page/);
     await jump(page, 4);
     const touch = await touchDrag(page, 1, .7, false);
-    await expect(page.locator('.paper-strip')).toHaveCount(12);
+    await expect(page.locator('.flip-element')).toBeVisible();
     await touch.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
     await idle(page, 5);
     await touchDrag(page, -1);

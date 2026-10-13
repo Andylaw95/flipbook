@@ -2,8 +2,8 @@ const js = require('@eslint/js');
 const browserGlobals = Object.fromEntries([
     'window', 'document', 'navigator', 'console', 'setTimeout', 'clearTimeout',
     'requestAnimationFrame', 'cancelAnimationFrame', 'performance', 'ResizeObserver',
-    'fetch', 'FlipbookPDF', 'URLSearchParams', 'localStorage', 'sessionStorage', 'pdfjsLib',
-    'getComputedStyle', 'URL', 'Blob', 'Event', 'Element', 'PointerEvent', 'innerWidth', 'innerHeight', '__flipbookApp'
+    'fetch', 'FlipbookPDF', 'PageCurl', 'FlipbookNotes', 'URLSearchParams', 'localStorage', 'sessionStorage', 'pdfjsLib',
+    'getComputedStyle', 'URL', 'Blob', 'Event', 'Element', 'PointerEvent', 'HTMLCanvasElement', 'Storage', 'innerWidth', 'innerHeight', '__flipbookApp'
 ].map(name => [name, 'readonly']));
 module.exports = [
     {
@@ -13,5 +13,5 @@ module.exports = [
         rules: { ...js.configs.recommended.rules, 'no-unused-vars': ['error', { args: 'none', caughtErrors: 'none' }] }
     },
     { files: ['js/app.js', 'js/embed.js'], languageOptions: { globals: { FlipbookEngine: 'readonly', FullscreenController: 'readonly' } } },
-    { files: ['**/*.cjs'], languageOptions: { globals: { require: 'readonly', module: 'readonly', process: 'readonly', __dirname: 'readonly' } } }
+    { files: ['**/*.cjs'], languageOptions: { globals: { Buffer: 'readonly', require: 'readonly', module: 'readonly', process: 'readonly', __dirname: 'readonly' } } }
 ];
