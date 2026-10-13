@@ -564,6 +564,30 @@ html, body {
     transform-style: flat;
     will-change: transform;
 }
+.paper-mesh { position: absolute; pointer-events: none; }
+
+.notes-panel { padding: 16px; font-size: 13px; line-height: 1.5; color: #333; }
+.notes-panel p { margin: 0 0 12px; }
+.notes-privacy { color: #4b4b55; }
+#notes-status { min-height: 1.5em; }
+.note-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.notes-panel button, .notes-panel select, .notes-panel textarea {
+    font: inherit; border: 1px solid #777; border-radius: 5px; color: #252535; background: #fff;
+}
+.notes-panel button { min-height: 36px; padding: 5px 10px; cursor: pointer; }
+.notes-panel button:hover { background: #f0f0f4; }
+.notes-panel button:disabled { opacity: .55; cursor: default; }
+.notes-panel :focus-visible { outline: 3px solid #1261a0; outline-offset: 2px; }
+.notes-panel label { display: block; font-weight: 600; margin-bottom: 5px; }
+.notes-panel select, .notes-panel textarea { width: 100%; padding: 8px; margin-bottom: 12px; }
+.notes-panel textarea { resize: vertical; min-height: 100px; }
+.notes-panel h2 { font-size: 16px; margin: 8px 0; }
+#notes-list { list-style: none; padding: 0; }
+#notes-list li { padding: 14px 0 2px; border-bottom: 1px solid #d5d5db; }
+.notes-panel .note-text { white-space: pre-wrap; overflow-wrap: anywhere; margin: 8px 0; }
+.notes-panel .note-page { text-decoration: underline; }
+.notes-exports { margin-top: 18px; }
+#notes-restore { max-width: 100%; font: inherit; }
 .paper-front, .paper-back {
     position: absolute;
     inset: 0;
@@ -1148,3 +1172,6 @@ html, body {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Keep the new Notes tab readable on the pale sidebar background. */
+.sidebar-tab[data-tab="notes"].active { color: #b52643; }

@@ -8,7 +8,7 @@ test('phone layout supports a single-page curved pointer drag and cancellation',
     await page.mouse.move(box.x + box.width * .88, box.y + box.height * .7);
     await page.mouse.down();
     await page.mouse.move(box.x + box.width * .2, box.y + box.height * .68, { steps: 12 });
-    await expect(page.locator('.paper-strip')).toHaveCount(12);
+    await expect(page.locator('.flip-element')).toBeVisible();
     await page.waitForTimeout(120);
     await page.mouse.up();
     await idle(page, 5);

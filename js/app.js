@@ -547,6 +547,9 @@
         /* --- Sidebar --- */
         _toggleSidebar() {
             this.sidebarOpen = !this.sidebarOpen;
+            if (!this.sidebarOpen && this.els.sidebar.contains(document.activeElement)) this.els['btn-menu'].focus();
+            this.els.sidebar.inert = !this.sidebarOpen;
+            this.els['btn-menu'].setAttribute('aria-expanded', String(this.sidebarOpen));
             this.els['sidebar'].classList.toggle('hidden', !this.sidebarOpen);
             this.els['viewer'].classList.toggle('sidebar-open', this.sidebarOpen);
 
@@ -559,10 +562,17 @@
         _switchTab(tabName) {
             document.querySelectorAll('.sidebar-tab').forEach(t => {
                 t.classList.toggle('active', t.dataset.tab === tabName);
+                t.setAttribute('aria-pressed', String(t.dataset.tab === tabName));
             });
 
             this.els['thumbnail-grid'].classList.toggle('hidden', tabName !== 'thumbnails');
             this.els['bookmark-list'].classList.toggle('hidden', tabName !== 'bookmarks');
+            const panel = document.getElementById('notes-panel');
+            panel.classList.toggle('hidden', tabName !== 'notes');
+            if (tabName === 'notes') {
+                this.notes ||= new FlipbookNotes({ panel, engine: this.engine });
+                this.notes.open();
+            }
         }
 
         async _loadThumbnails() {

@@ -7,7 +7,7 @@
     "build": "node scripts/verify-release.mjs",
     "start": "python3 -m http.server 8000 --bind 127.0.0.1",
     "lint": "eslint js scripts tests playwright.config.cjs",
-    "check": "node --check js/flipbook-engine.js && node --check js/app.js && node --check js/fullscreen.js && node --check js/pdf-loader.js && node --check js/embed.js",
+    "check": "node --check js/flipbook-engine.js && node --check js/page-curl.js && node --check js/notes.js && node --check js/app.js && node --check js/fullscreen.js && node --check js/pdf-loader.js && node --check js/embed.js",
     "test": "playwright test",
     "vendor": "node scripts/vendor-pdfjs.mjs"
   },

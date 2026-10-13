@@ -22,6 +22,11 @@ under the [Flipbook Source-Available License 1.0](LICENSE).
 or start the local server below and open
 `http://127.0.0.1:8000/index.html?pdf=examples/form-and-field.pdf`.
 
+## Review preview
+
+This branch adds [browser-local Notes and corner-driven page curls](docs/FEATURE-PREVIEW.md).
+These changes are awaiting review; the live demo and published release remain v1.0.1.
+
 ## Quick start
 
 Download this repository's ZIP and extract it, or clone the repository:

@@ -557,6 +557,23 @@ class FlipbookEngine {
     /* ========== Flexible paper ========== */
 
     _createLeaf(front, back, direction) {
+        this._curlRenderer ||= new PageCurl();
+        if (this._curlRenderer.setPages(front, back, {
+            width: this.pageWidth, height: this.pageHeight,
+            singlePage: this.singlePageMode, scale: this._fitScale
+        })) {
+            const leaf = document.createElement('div');
+            leaf.className = 'flip-element';
+            leaf.setAttribute('aria-hidden', 'true');
+            leaf.renderer = this._curlRenderer;
+            leaf.source = { front, back, direction };
+            leaf.append(this._curlRenderer.canvas);
+            return leaf;
+        }
+        return this._createStripLeaf(front, back, direction);
+    }
+
+    _createStripLeaf(front, back, direction) {
         const leaf = document.createElement('div');
         leaf.className = 'flip-element';
         leaf.setAttribute('aria-hidden', 'true');
@@ -600,6 +617,17 @@ class FlipbookEngine {
         const p = this.singlePageMode && turn.direction < 0 ? 1 - turn.progress : turn.progress;
         const forward = this.singlePageMode || turn.direction > 0;
         const bend = Math.sin(Math.PI * p);
+        if (turn.leaf.renderer) {
+            if (turn.leaf.renderer.draw(p, turn.corner, forward)) {
+                this._shadows.forEach(shadow => { shadow.style.opacity = '0'; });
+                return;
+            }
+            // Context loss must not leave a blank page or strand a gesture.
+            const { front, back, direction } = turn.leaf.source;
+            const fallback = this._createStripLeaf(front, back, direction);
+            turn.leaf.replaceWith(fallback);
+            turn.leaf = this.flipEl = fallback;
+        }
         const strips = turn.leaf.strips;
         const width = this.pageWidth / strips.length;
         const hinge = this.singlePageMode ? 0 : this.pageWidth;
@@ -732,6 +760,8 @@ class FlipbookEngine {
         const progress = Math.max(0, Math.min(1, -g.direction * g.dx / (g.pageW * (this.singlePageMode ? 1 : 1.6))));
         if (this._turn) {
             this._turn.dragged = true;
+            const height = this.pageHeight * this._fitScale;
+            this._turn.corner = Math.max(-1, Math.min(1, g.corner - g.dy / height * 2));
             this._drawTurn(this._turn, progress);
         }
     }
@@ -959,6 +989,7 @@ class FlipbookEngine {
         this._zoomInteractive = false;
         this.cancelGesture();
         this._destroyed = true;
+        this._curlRenderer?.destroy();
         ++this._renderEpoch;
         clearTimeout(this._resolutionTimer);
         this._resizeObserver?.disconnect();
