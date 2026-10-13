@@ -1,0 +1,920 @@
+{
+  "before": {
+    "label": "before",
+    "commit": "436a80f60974799367da19fc05fff53ea05406b0",
+    "pdf": "examples/form-and-field.pdf",
+    "measurements": [
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 0,
+        "readyMs": 142.79999999701977,
+        "firstLeafMs": 25,
+        "turnMs": 758.8999999985099,
+        "drawP95Ms": 0.20000000298023224,
+        "frameP95Ms": 17.5,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0.10000000149011612
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 21.700000002980232
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 21.700000002980232
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 21.900000005960464
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 1,
+        "readyMs": 84.70000000298023,
+        "firstLeafMs": 34.30000000447035,
+        "turnMs": 764.6000000014901,
+        "drawP95Ms": 0.20000000298023224,
+        "frameP95Ms": 17.5,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 31.30000000447035
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 31.30000000447035
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 31.5
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 2,
+        "readyMs": 103,
+        "firstLeafMs": 34.70000000298023,
+        "turnMs": 765.6000000014901,
+        "drawP95Ms": 0.20000000298023224,
+        "frameP95Ms": 17.299999997019768,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 32
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 32
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 32.100000001490116
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 3,
+        "readyMs": 97.89999999850988,
+        "firstLeafMs": 34.70000000298023,
+        "turnMs": 764.9000000059605,
+        "drawP95Ms": 0.20000000298023224,
+        "frameP95Ms": 17.299999997019768,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 31.899999998509884
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 31.899999998509884
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 32.099999994039536
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 4,
+        "readyMs": 100.5,
+        "firstLeafMs": 33.100000001490116,
+        "turnMs": 766.5,
+        "drawP95Ms": 0.20000000298023224,
+        "frameP95Ms": 16.80000000447035,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 30.5
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 30.5
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 30.600000001490116
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 0,
+        "readyMs": 142,
+        "firstLeafMs": 11,
+        "turnMs": 745,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 44,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 10
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 10
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 1,
+        "readyMs": 94,
+        "firstLeafMs": 12,
+        "turnMs": 745,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 44,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 2,
+        "readyMs": 94,
+        "firstLeafMs": 9,
+        "turnMs": 742,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 44,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 7
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 7
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 3,
+        "readyMs": 103,
+        "firstLeafMs": 12,
+        "turnMs": 746,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 44,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 4,
+        "readyMs": 93,
+        "firstLeafMs": 12,
+        "turnMs": 746,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 44,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "environment": "Sequential isolated headless browsers on the same Mac; no throttling; five cold contexts per browser/viewport. Not a comparison with the reference service.",
+    "summary": {
+      "chromium-desktop": {
+        "readyMs": {
+          "median": 100.5,
+          "min": 84.70000000298023,
+          "max": 142.79999999701977
+        },
+        "firstLeafMs": {
+          "median": 34.30000000447035,
+          "min": 25,
+          "max": 34.70000000298023
+        },
+        "turnMs": {
+          "median": 764.9000000059605,
+          "min": 758.8999999985099,
+          "max": 766.5
+        },
+        "drawP95Ms": {
+          "median": 0.20000000298023224,
+          "min": 0.20000000298023224,
+          "max": 0.20000000298023224
+        },
+        "frameP95Ms": {
+          "median": 17.299999997019768,
+          "min": 16.80000000447035,
+          "max": 17.5
+        },
+        "framesOver33ms": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "webkit-mobile": {
+        "readyMs": {
+          "median": 94,
+          "min": 93,
+          "max": 142
+        },
+        "firstLeafMs": {
+          "median": 12,
+          "min": 9,
+          "max": 12
+        },
+        "turnMs": {
+          "median": 745,
+          "min": 742,
+          "max": 746
+        },
+        "drawP95Ms": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "frameP95Ms": {
+          "median": 18,
+          "min": 18,
+          "max": 18
+        },
+        "framesOver33ms": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    }
+  },
+  "after": {
+    "label": "after",
+    "commit": "e3c704d9f58c9f42fe2e0fff959d7667dce15a34",
+    "pdf": "examples/form-and-field.pdf",
+    "measurements": [
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 0,
+        "readyMs": 109.39999999850988,
+        "firstLeafMs": 43.5,
+        "turnMs": 781.1000000014901,
+        "drawP95Ms": 0.19999999552965164,
+        "frameP95Ms": 17.600000001490116,
+        "framesOver33ms": 0,
+        "frames": 46,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 31.600000001490116
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 31.600000001490116
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 31.799999997019768
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 1,
+        "readyMs": 98.20000000298023,
+        "firstLeafMs": 42.100000001490116,
+        "turnMs": 778.1999999955297,
+        "drawP95Ms": 0.10000000149011612,
+        "frameP95Ms": 16.899999998509884,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 32.899999998509884
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 32.899999998509884
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 33.100000001490116
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 2,
+        "readyMs": 105.70000000298023,
+        "firstLeafMs": 38.20000000298023,
+        "turnMs": 764.6000000014901,
+        "drawP95Ms": 0.10000000149011612,
+        "frameP95Ms": 17.399999998509884,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 28.899999998509884
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 28.899999998509884
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 29
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 3,
+        "readyMs": 95.80000000447035,
+        "firstLeafMs": 45.5,
+        "turnMs": 782.3000000044703,
+        "drawP95Ms": 0.10000000149011612,
+        "frameP95Ms": 17,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 35.69999999552965
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 35.69999999552965
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 35.899999998509884
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "chromium-desktop",
+        "version": "155.0.8059.40",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "run": 4,
+        "readyMs": 96.70000000298023,
+        "firstLeafMs": 40.20000000298023,
+        "turnMs": 764.6000000014901,
+        "drawP95Ms": 0.10000000149011612,
+        "frameP95Ms": 17,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 3,
+        "cacheBytes": 5760000,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 30.899999998509884
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 30.899999998509884
+          },
+          {
+            "page": 3,
+            "cached": false,
+            "ms": 31.099999994039536
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 0,
+        "readyMs": 149,
+        "firstLeafMs": 38,
+        "turnMs": 762,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 44,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 1,
+        "readyMs": 90,
+        "firstLeafMs": 26,
+        "turnMs": 762,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 2,
+        "readyMs": 94,
+        "firstLeafMs": 28,
+        "turnMs": 763,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 3,
+        "readyMs": 97,
+        "firstLeafMs": 27,
+        "turnMs": 762,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 11
+          }
+        ],
+        "errors": []
+      },
+      {
+        "browser": "webkit-mobile",
+        "version": "26.5",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "run": 4,
+        "readyMs": 95,
+        "firstLeafMs": 22,
+        "turnMs": 758,
+        "drawP95Ms": 1,
+        "frameP95Ms": 18,
+        "framesOver33ms": 0,
+        "frames": 45,
+        "cachePages": 2,
+        "cacheBytes": 12441600,
+        "renders": [
+          {
+            "page": 1,
+            "cached": true,
+            "ms": 0
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 7
+          },
+          {
+            "page": 2,
+            "cached": false,
+            "ms": 7
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "environment": "Sequential isolated headless browsers on the same Mac; no throttling; five cold contexts per browser/viewport. Not a comparison with the reference service.",
+    "summary": {
+      "chromium-desktop": {
+        "readyMs": {
+          "median": 98.20000000298023,
+          "min": 95.80000000447035,
+          "max": 109.39999999850988
+        },
+        "firstLeafMs": {
+          "median": 42.100000001490116,
+          "min": 38.20000000298023,
+          "max": 45.5
+        },
+        "turnMs": {
+          "median": 778.1999999955297,
+          "min": 764.6000000014901,
+          "max": 782.3000000044703
+        },
+        "drawP95Ms": {
+          "median": 0.10000000149011612,
+          "min": 0.10000000149011612,
+          "max": 0.19999999552965164
+        },
+        "frameP95Ms": {
+          "median": 17,
+          "min": 16.899999998509884,
+          "max": 17.600000001490116
+        },
+        "framesOver33ms": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "webkit-mobile": {
+        "readyMs": {
+          "median": 95,
+          "min": 90,
+          "max": 149
+        },
+        "firstLeafMs": {
+          "median": 27,
+          "min": 22,
+          "max": 38
+        },
+        "turnMs": {
+          "median": 762,
+          "min": 758,
+          "max": 763
+        },
+        "drawP95Ms": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "frameP95Ms": {
+          "median": 18,
+          "min": 18,
+          "max": 18
+        },
+        "framesOver33ms": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    }
+  }
+}

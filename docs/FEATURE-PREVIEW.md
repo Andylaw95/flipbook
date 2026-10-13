@@ -6,6 +6,14 @@ clearance patch; these larger changes have not been merged or released.
 Run the local server from the README and open
 `/?pdf=examples/form-and-field.pdf`. Open **Menu → Notes** to try the editor.
 
+## Watch the preview
+
+[![A real corner-driven page turn](previews/notes-curl-preview.gif)](previews/notes-curl-preview.mp4)
+
+[26-second MP4](previews/notes-curl-preview.mp4) · [Corner screenshot](previews/corner-curl.png) · [Notes screenshot](previews/notes.png) · [Raw timing results](previews/measurements.json)
+
+Recorded from app commit `e3c704d9f58c9f42fe2e0fff959d7667dce15a34` using normal mouse/touch input and real viewport frames. The reader was loaded before recording. The phone segment uses browser emulation. The 25 fps capture contains no interpolated or generated app frames, browser address bars, external assets, private branding or personal data. Original sample artwork is included under the root license. Video typography uses DejaVu; its [notice](media/LICENSE-DejaVu.txt) is retained.
+
 ## Notes
 
 - Add a note for the whole document or any page. Page buttons return to that page.
@@ -54,3 +62,28 @@ Measurements and a short screen recording accompany the draft PR. They compare
 this app before and after using the same original PDF and viewports; they do not
 establish a performance comparison with any third-party reader. No rendering
 scheduler or cache changes were made: the baseline did not demonstrate a need.
+
+### Local before/after measurements
+
+Five cold browser contexts per configuration on the same Mac, served over loopback,
+using the identical 12-page `examples/form-and-field.pdf`. Baseline `436a80f` has the
+same tree as release commit `17e80d7`; draft app commit is `e3c704d`. Values below
+are medians across the five runs, in milliseconds.
+
+| Configuration / metric | Before | Draft |
+| --- | ---: | ---: |
+| Chromium desktop 1440×900: reader ready | 100.5 | 98.2 |
+| Chromium: first leaf setup | 34.3 | 42.1 |
+| Chromium: turn completion | 764.9 | 778.2 |
+| Chromium: 95th-percentile animation-frame interval | 17.3 | 17.0 |
+| WebKit phone emulation 390×844: reader ready | 94 | 95 |
+| WebKit: first leaf setup | 12 | 27 |
+| WebKit: turn completion | 745 | 762 |
+| WebKit: 95th-percentile animation-frame interval | 18 | 18 |
+
+The mesh adds first-turn setup work; these measurements do **not** establish a
+speed improvement. No sampled animation-frame interval exceeded 33.4 ms during
+the measured turns. This measures browser animation callbacks, not physical
+screen presentation or GPU execution time. Small local vector PDFs, headless
+browsers, and five samples are not a benchmark for large documents or real phones.
+The existing rendering/cache strategy is unchanged.
