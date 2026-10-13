@@ -11,10 +11,10 @@ module.exports = defineConfig({
         trace: 'retain-on-failure'
     },
     projects: [
-        { name: 'desktop-chrome', testMatch: ['**/desktop*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs'], use: { channel: 'chrome', viewport: { width: 1440, height: 1000 } } },
-        { name: 'desktop-webkit', testMatch: ['**/desktop*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs'], use: { browserName: 'webkit', viewport: { width: 1440, height: 1000 } } },
-        { name: 'mobile-webkit', testMatch: ['**/webkit-mobile*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs'], use: { ...devices['iPhone 13'] } },
-        { name: 'mobile-chrome', testMatch: ['**/mobile*.spec.cjs', '**/webkit-mobile*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs'], use: { ...devices['Pixel 7'], channel: 'chrome' } }
+        { name: 'desktop-chrome', testMatch: ['**/desktop*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs', '**/notices.spec.cjs'], use: { channel: 'chrome', viewport: { width: 1440, height: 1000 } } },
+        { name: 'desktop-webkit', testMatch: ['**/desktop*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs', '**/notices.spec.cjs'], use: { browserName: 'webkit', viewport: { width: 1440, height: 1000 } } },
+        { name: 'mobile-webkit', testMatch: ['**/webkit-mobile*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs', '**/notices.spec.cjs'], use: { ...devices['iPhone 13'] } },
+        { name: 'mobile-chrome', testMatch: ['**/mobile*.spec.cjs', '**/webkit-mobile*.spec.cjs', '**/fullscreen.spec.cjs', '**/zoom.spec.cjs', '**/security.spec.cjs', '**/attribution.spec.cjs', '**/notices.spec.cjs'], use: { ...devices['Pixel 7'], channel: 'chrome' } }
     ],
     webServer: {
         command: 'python3 -m http.server 8139 --bind 127.0.0.1',

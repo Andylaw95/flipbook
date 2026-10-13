@@ -1,6 +1,6 @@
 /* Native fullscreen with an explicit, reversible reading-mode fallback. */
 class FullscreenController {
-    constructor({ root, button, onChange = () => {} }) {
+    constructor({ root, button, noticeRoot = root, onChange = () => {} }) {
         this.root = root;
         this.button = button;
         this.onChange = onChange;
@@ -20,7 +20,13 @@ class FullscreenController {
         this.status.className = 'fullscreen-status';
         this.status.setAttribute('role', 'status');
         this.status.setAttribute('aria-live', 'polite');
-        root.append(this.exitButton, this.status);
+        // Anchor notices to the reading area, above controls and any wrapped
+        // footer. A shared stack also keeps simultaneous zoom notices readable.
+        this.notices = document.createElement('div');
+        this.notices.className = 'reader-notices';
+        this.notices.append(this.status);
+        noticeRoot.append(this.notices);
+        root.append(this.exitButton);
 
         button.addEventListener('click', () => this.toggle());
         this.exitButton.addEventListener('click', () => this.toggle());
