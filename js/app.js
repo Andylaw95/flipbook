@@ -210,6 +210,7 @@
             // Fullscreen
             this.fullscreen = new FullscreenController({
                 root: this.els.app,
+                noticeRoot: this.els.viewer,
                 button: this.els['btn-fullscreen'],
                 onChange: () => {
                     this.engine?._handleResize();
@@ -417,7 +418,7 @@
                 el = document.createElement('div');
                 el.id = 'mobile-hint';
                 el.className = 'mobile-hint hidden';
-                document.body.appendChild(el);
+                this.fullscreen.notices.prepend(el);
             }
             el.textContent = text;
             el.classList.remove('hidden');

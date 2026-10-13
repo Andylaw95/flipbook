@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-10-13
+
+- Keep reading-mode and touch-zoom notices above the scrubber and author footer,
+  including wrapped embed footers and reserved safe-area space.
+- Stack simultaneous notices so their text stays readable.
+
 ## 1.0.0 — 2026-10-12
 
 - First published release under the Flipbook Source-Available License 1.0.

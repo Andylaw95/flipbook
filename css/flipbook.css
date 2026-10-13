@@ -1031,17 +1031,13 @@ html, body {
 }
 
 .mobile-hint {
-    position: fixed;
-    left: 50%;
-    bottom: calc(52px + env(safe-area-inset-bottom));
-    transform: translateX(-50%);
+    max-width: 100%;
     padding: 8px 12px;
     border-radius: 999px;
     font-size: 12px;
     font-weight: 600;
     color: #fff;
     background: rgba(26, 26, 46, 0.88);
-    z-index: 1200;
     pointer-events: none;
     transition: opacity 0.2s ease;
     opacity: 1;

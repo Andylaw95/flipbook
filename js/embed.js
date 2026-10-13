@@ -96,6 +96,7 @@ import './pdf-loader.js';
 
         new FullscreenController({
             root: document.querySelector('.embed-viewer'),
+            noticeRoot: document.getElementById('e-canvasWrap'),
             button: document.getElementById('e-fullscreen'),
             onChange: () => { if (pdfDoc) renderPage(currentPage); }
         });
