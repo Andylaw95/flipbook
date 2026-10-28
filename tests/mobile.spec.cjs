@@ -82,3 +82,14 @@ test('reduced motion touch navigation is instant and cache respects the mobile b
     });
     expect(bytes).toBeLessThanOrEqual(32_000_000);
 });
+
+test('moderate touch drags complete both ways after holding the sheet', async ({ page }) => {
+    await ready(page);
+    await jump(page, 4);
+    const touch = await touchDrag(page, 1, .38, false);
+    await page.waitForTimeout(350);
+    await touch.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await idle(page, 5);
+    await touchDrag(page, -1, .38);
+    await idle(page, 4);
+});

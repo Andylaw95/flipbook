@@ -662,12 +662,12 @@ class FlipbookEngine {
             turn.resolve = resolve;
             const start = turn.progress;
             const distance = Math.abs(target - start);
-            const duration = this._motionQuery.matches ? 0 : Math.max(120, (target ? 720 : 360) * Math.pow(distance, .7));
+            const duration = this._motionQuery.matches ? 0 : Math.max(turn.dragged ? 280 : 120, (target ? 720 : 520) * Math.pow(distance, .7));
             const started = performance.now();
             const tick = now => {
                 if (this._turn !== turn) { resolve(false); return; }
                 const t = duration ? Math.min(1, (now - started) / duration) : 1;
-                const eased = turn.dragged ? 1 - Math.pow(1 - t, 3) : t * t * (3 - 2 * t);
+                const eased = turn.dragged && target ? 1 - Math.pow(1 - t, 3) : t * t * (3 - 2 * t);
                 this._drawTurn(turn, start + (target - start) * eased);
                 if (t < 1) turn.raf = requestAnimationFrame(tick);
                 else { turn.resolve = null; resolve(true); }
@@ -697,7 +697,7 @@ class FlipbookEngine {
         this._gesture = {
             id: e.pointerId, type: e.pointerType, x: e.clientX, y: e.clientY,
             lastX: e.clientX, lastTime: performance.now(), velocity: 0,
-            startTime: performance.now(), dx: 0, dy: 0, direction, pageW,
+            startTime: performance.now(), dx: 0, dy: 0, direction, pageW, peakDistance: 0,
             corner: Math.max(-1, Math.min(1, (e.clientY - rect.top) / rect.height * 2 - 1)),
             panX: this.panX, panY: this.panY, pan: this._isZoomed()
         };
@@ -729,7 +729,9 @@ class FlipbookEngine {
             this.isDragging = true;
             g.setup = this._beginTurn(g.direction, g.corner);
         }
-        const progress = Math.max(0, Math.min(1, -g.direction * g.dx / (g.pageW * (this.singlePageMode ? 1 : 1.6))));
+        const distance = Math.max(0, -g.direction * g.dx);
+        g.peakDistance = Math.max(g.peakDistance, distance);
+        const progress = Math.max(0, Math.min(1, distance / (g.pageW * (this.singlePageMode ? 1 : 1.6))));
         if (this._turn) {
             this._turn.dragged = true;
             this._drawTurn(this._turn, progress);
@@ -756,7 +758,12 @@ class FlipbookEngine {
         const velocity = performance.now() - g.lastTime < 100 ? -g.direction * g.velocity : 0;
         const turn = await g.setup;
         if (!turn || turn !== this._turn) return;
-        const commit = velocity > -.35 && (turn.progress >= .45 || (turn.progress > .06 && velocity > .5));
+        // Use physical page distance so desktop and touch turns need similar effort.
+        const distance = Math.max(0, -g.direction * g.dx);
+        const reversed = g.peakDistance - distance > Math.max(24, g.pageW * .08);
+        // A deliberate pull back cancels; a few pixels of release jitter do not.
+        const commit = !reversed && (distance >= g.pageW * .34 ||
+            (distance >= Math.max(24, g.pageW * .1) && velocity > .5));
         if (await this._animateTurn(turn, commit ? 1 : 0)) this._finishTurn(turn, commit);
     }
 

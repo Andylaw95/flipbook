@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Make slow page drags easier on desktop and touch, tolerate small release jitter,
+  and soften cancelled turns while keeping deliberate pullback cancellation.
+- Add browser regressions for moderate drags, delayed rendering, and cancellation duration.
+
 ## 1.0.1 — 2026-10-13
 
 - Keep reading-mode and touch-zoom notices above the scrubber and author footer,
